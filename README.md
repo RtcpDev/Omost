@@ -18,10 +18,12 @@ Or, you can use the below deployment (requires 8GB Nvidia VRAM):
 
     git clone https://github.com/lllyasviel/Omost.git
     cd Omost
-    conda create -n omost python=3.10
-    conda activate omost
-    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-    pip install -r requirements.txt
+    pip install uv 
+    #sudo snap install astral-uv --classic --> if you are using cloud ubuntu environment this will help you get uv installer
+    uv venv omost --python=3.10
+    source activate omost/bin/activate
+    uv pip install -r torch-requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
+    uv pip install -r requirements.txt --no-deps
     python gradio_app.py
 
 (Note that quant LLM requires `bitsandbytes` - some 9XX or 10XX or 20XX GPUs may have trouble in running it. If that happens, just use our official huggingface space.)
