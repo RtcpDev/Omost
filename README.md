@@ -22,7 +22,7 @@ Or, you can use the below deployment (requires 8GB Nvidia VRAM):
     #sudo snap install astral-uv --classic --> if you are using cloud ubuntu environment this will help you get uv installer
     uv venv omost --python=3.10
     source activate omost/bin/activate
-    uv pip install -r torch-requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
+    uv pip install -r torch_requirements.txt --extra-index-url https://download.pytorch.org/whl/cu121
     uv pip install -r requirements.txt --no-deps
     python gradio_app.py
 
