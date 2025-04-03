@@ -28,6 +28,8 @@ Or, you can use the below deployment (requires 8GB Nvidia VRAM):
 
 (Note that quant LLM requires `bitsandbytes` - some 9XX or 10XX or 20XX GPUs may have trouble in running it. If that happens, just use our official huggingface space.)
 
+If you don't want to load the pretrained LLM, it turns out that models like Gemini 2.5 Pro and the OpenAI O-series of models can take in the original description of the OMOST code framework and generate coherent code while following instructions. If you want to try this out, run gradio_code.py instead of gradio_app.py. Happy hacking!
+
 # Screenshots
 
 (All with random seed 12345)
